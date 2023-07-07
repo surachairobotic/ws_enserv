@@ -1,0 +1,8 @@
+07 July 2023
+- ดึง VDO จากกล้องประตู streaming ขึ้น kafka
+- อ่าน VDO จาก Kafka มาแสดงผล ได้ FPS=20 (localhost)
+- อ่าน analog sensor 12ch ส่ง MQTT ใช้บอร์ด Arduino Mega WiFi
+- เขียนหนังสือสั่ง vital sign sensor
+- ดึงค่า vital sign จาก smart watch ตัวผอมที่มี 2 อัน จากจีน ต่อ bluetooth แต่ไม่สามารถดึงค่าออกมา เพราะไม่รู้ว่าต้องส่งคำสั่งอะไรไปใน service เพื่อให้มันตอบกลับมา
+- ดึงค่า vital sign จาก smart watch ตัวอ้วนๆ จากจีน ต่อ bluetooth แต่ไม่สามารถดึงค่าออกมา เพราะไม่รู้ว่าต้องส่งคำสั่งอะไรไปใน service เพื่อให้มันตอบกลับมา
+- ดึงค่า vital sign จาก Evya จากอินเดีย แอพมันเรียกหา OTP ที่ใช้เบอร์ของอินเดีย

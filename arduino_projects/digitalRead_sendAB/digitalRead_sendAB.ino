@@ -1,10 +1,13 @@
 #include <SoftwareSerial.h>
 SoftwareSerial debugSerial(10, 11); // RX, TX
 
-const int ledPin =  LED_BUILTIN;
-const int inputPin =  7;
-const int debugPin =  9;
+const uint8_t ledPin =  LED_BUILTIN;
+const uint8_t inputPin =  7;
+const uint8_t debugPin =  9;
 const long interval = 1000;
+const uint8_t analogPins[] = {A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11};
+const uint8_t analogPinsLength = 12;
+const unsigned int BAUDRATE = 1200;
 
 bool ledState = true;
 unsigned long previousMillis = 0;
@@ -15,9 +18,10 @@ void setup() {
   pinMode(ledPin, OUTPUT);
   pinMode(debugPin, OUTPUT);
   pinMode(inputPin, INPUT_PULLUP);
-  Serial.begin(9600);
+  Serial.begin(BAUDRATE);
+  Serial3.begin(BAUDRATE);
 
-  debugSerial.begin(9600);
+  debugSerial.begin(BAUDRATE);
   debugSerial.println("debug mode!");
 }
 
@@ -37,13 +41,32 @@ void loop() {
 }
 
 void checkInputAndSend() {
-  unsigned int value = analogRead(A0);
-  char buff[128];
-  sprintf(buff, "%d\r\n", value);
-  debugSerial.write(buff);
-  Serial.write(buff);
-  if (value < 512)
-    digitalWrite(debugPin, HIGH);
-  else
-    digitalWrite(debugPin, LOW);
+  String message = "$";
+
+  for(unsigned int i=0; i<analogPinsLength; i++) {
+    unsigned int analogValue = analogRead(analogPins[i]);
+    char buff[4];
+    sprintf(buff, "%d", analogValue);
+    message += buff;
+    if (i < (analogPinsLength-1)) {
+      message += ',';
+    }
+  }
+  message += "\r\n";
+  
+//  unsigned int value[12];
+//  for(unsigned int i=0; i<12; i++)
+//    value[i] = analogRead(analogPins[i]);
+//  
+//  char buff[128];
+//  sprintf(buff, "%d\r\n", value);
+
+  //message = "A\r\n";
+  debugSerial.write(message.c_str());
+  Serial.write(message.c_str());
+  Serial3.write(message.c_str());
+//  if (value > 512)
+//    digitalWrite(debugPin, HIGH);
+//  else
+//    digitalWrite(debugPin, LOW);
 }
