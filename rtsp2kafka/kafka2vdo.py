@@ -5,9 +5,10 @@ import time
 
 # Initialize Kafka consumer
 #consumer = KafkaConsumer('video_topic', bootstrap_servers='localhost:9092')
-consumer = KafkaConsumer('video_topic', bootstrap_servers='localhost:9092',
+consumer = KafkaConsumer('video_topic', bootstrap_servers='10.10.10.25:9092',
                          group_id='my-consumer-group',
-                         auto_offset_reset='latest')
+                         auto_offset_reset='latest',
+                         api_version=(2,0,2))
 
 # Initialize variables for FPS calculation
 start_time = time.time()
