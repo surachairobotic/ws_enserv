@@ -8,3 +8,8 @@ Kafka
 ./bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 
 
+
+
+ ./keytool -genkey -keystore "D:\encare_keys\encare_keystore_v1.jks" -storepass 123456 -alias encaredemo -keypass 123456 -dname "o=Huawei" -keysize 2048 -keyalg RSA -validity 36500
+ 
+ 

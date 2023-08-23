@@ -13,6 +13,38 @@
 - ไปช่วยคุณชัยแก้ไขปัญหาของบอร์ด ESMA ที่ ESS
 - แก้ปัญหา streaming ขึ้น kafka เมื่อรันไปนานๆ แล้วมี delay
 
+21 July 2023
+- ทดลองใช้งาน Huawei Watch 4 Pro กับ Android Phone ได้
+- ไปประกอบ DAVIS ที่ MTEC จำนวน 2 วัน
+- เริ่มเขียนโปรแกรมด้วย Android Studio เพื่อดึงค่าจาก Huawei Watch แต่มีปัญหา RAM ขึ้น 100% เมื่อรัน Emulator
+- ทำเรื่องขอซื้อ RAM ขนาด 8GB เพื่อมาใส่ใน Labtop
 
+28 July 2023
+- ทำเรื่องขอซื้อ PC
+- ไปประกอบ DAVIS ที่ MTEC จำนวน 2 วัน
+- ใส่ RAM เพิ่ม ตอนนี้ RAM size รวมเป็น 16GB เพียงพอต่อการรัน Emulator on Android Studio.
+- เขียน Simple Program ด้วย Android Studio แล้วใส่ลง SmartPhone ได้
 
-xxxxxxx
+04 August 2023
+- ลง DevEco Studio แล้วหาวิธีสร้างแอพ hello world แล้วเอาลง smart watch ให้ได้
+- เปลี่ยนมาสั่ง smart watch + sdk จากจีน ทำเรื่องส่งให้ nook เรียบร้อย
+- คุยเพื่อถามราคา  real-time location tracking on warehouse จากจีน 2 บริษัท
+- ราคา  real-time location tracking on warehouse จากจีน คือ 2780USD หรือ 96,332.56 บาท / BlueIoT
+- ราคา  real-time location tracking on warehouse จากจีน คือ 2008USD หรือ 69,798.08 บาท / Crepak
+
+11 August 2023
+- Max ส่ง DLL มาให้ทดลองเรียกใช้ เพื่อผนวกเข้าใน V-Soft
+- Install Qt and V-Soft ลงเครื่อง Notebook ของ EnServ
+- ค้นหาและสั่งซื้อ SmartWatch ที่สามารถวัด Blood glucose และมี API ให้ใช้งาน
+
+18 August 2023
+- SmartWatch : GTS5 ที่สั่งจากจีนมาถึง EnServ ได้นำส่งเอกสาร Invoice, Waybill ให้นุ๊กเรียบร้อย
+- เขียนแอพด้วย Kotlin เรียกใช้งาน SDK ได้เรียบร้อย
+- หาบริษัทมาทำแอพและเว็บสำหรับโปรเจค MBK โทรไปหา AScipt เพื่อนัดประชุม
+- ไป สวทช ทำ autoclick, davis
+
+25 August 2023
+- ประชุมกับ AScipt และส่ง requirement กลับไปเรียบร้อย
+- หาข้อมูล Interactive LED Wall โทรไปคุยและได้ราคาค่า Software มาเท่ากับ 300K ค่าจอ LED ต่างหาก สามารถไปหาเองได้
+- ดึงค่าจาก GTS5 ออกมาได้ และบันทึกลงไฟล์
+- ทดลองใส่ทั้งวันเพื่อเก็บข้อมูล จากนั้นนำข้อมูลมา plot ด้วย Excel พบว่าค่า blood glucose นั้นแย่มาก ไม่สามารถนำมาใช้งานได้
