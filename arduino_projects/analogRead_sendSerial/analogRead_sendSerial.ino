@@ -5,8 +5,8 @@ const uint8_t ledPin =  LED_BUILTIN;
 const uint8_t inputPin =  7;
 const uint8_t debugPin =  9;
 const long interval = 1000;
-const uint8_t analogPins[] = {A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11};
-const uint8_t analogPinsLength = 12;
+const uint8_t analogPins[] = {A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15};
+const uint8_t analogPinsLength = 16;
 const unsigned int BAUDRATE = 1200;
 
 bool ledState = true;

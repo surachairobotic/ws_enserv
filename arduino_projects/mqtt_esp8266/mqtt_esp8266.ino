@@ -25,7 +25,7 @@
 
 const char* ssid = "Enserv@Staff";
 const char* password = "Enserv12345";
-const char* mqtt_server = "10.10.10.26";
+const char* mqtt_server = "10.2.253.115";
 const unsigned int BAUDRATE = 1200;
 
 WiFiClient espClient;

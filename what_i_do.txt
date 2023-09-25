@@ -29,8 +29,8 @@
 - ลง DevEco Studio แล้วหาวิธีสร้างแอพ hello world แล้วเอาลง smart watch ให้ได้
 - เปลี่ยนมาสั่ง smart watch + sdk จากจีน ทำเรื่องส่งให้ nook เรียบร้อย
 - คุยเพื่อถามราคา  real-time location tracking on warehouse จากจีน 2 บริษัท
-- ราคา  real-time location tracking on warehouse จากจีน คือ 2780USD หรือ 96,332.56 บาท / BlueIoT
-- ราคา  real-time location tracking on warehouse จากจีน คือ 2008USD หรือ 69,798.08 บาท / Crepak
+- ราคา  real-time location tracking on warehouse จากจีน คือ 2780USD หรือ 96,332 บาท / BlueIoT
+- ราคา  real-time location tracking on warehouse จากจีน คือ 2008USD หรือ 69,798 บาท / Crepak
 
 11 August 2023
 - Max ส่ง DLL มาให้ทดลองเรียกใช้ เพื่อผนวกเข้าใน V-Soft
@@ -48,3 +48,30 @@
 - หาข้อมูล Interactive LED Wall โทรไปคุยและได้ราคาค่า Software มาเท่ากับ 300K ค่าจอ LED ต่างหาก สามารถไปหาเองได้
 - ดึงค่าจาก GTS5 ออกมาได้ และบันทึกลงไฟล์
 - ทดลองใส่ทั้งวันเพื่อเก็บข้อมูล จากนั้นนำข้อมูลมา plot ด้วย Excel พบว่าค่า blood glucose นั้นแย่มาก ไม่สามารถนำมาใช้งานได้
+- ประชุม MBK ได้งานเพิ่ม เค้าอยากได้ Indoor Human Localization
+- ประชุมกับ คุณอู๋ เปิด requirement รอเซ็นต์ NDA และจะส่ง GTS5+SDK+Doc ไปให้เค้าทดลองดู
+
+01 September 2023
+- ทดลองใส่ HCareThailand ตั้งแต่เวลา 10 โมง ถึง ตี 5 พบว่าค่า blood glucose ที่วัดได้นั้นไม่ makesense
+- คุยกับแป๋ง เรื่องงานต่างๆ ที่ต้องการ
+- ราคา  real-time location tracking on warehouse จากจีน คือ 2630USD หรือ 92,234 บาท / Dusun
+- เปลี่ยนจาก Flutter มาเป็น ReactNative (แป๋ง)
+
+08 September 2023
+- ออกแบบ function และ structure ของ EnterSpace Mobile Application.
+- เบรคเรื่อง Mobile App. กับ SmartWatch ไปก่อน ไปใช้แบบทาบนิ้วของ Touch Technology.
+- ออกแบบ Flow สำหรับ Kiosk Web App. และคุยกับแป๋ง
+- ทดสอบนาฬิกา HCare Plus+ Ver2 กับ HCare Go3 พบว่าค่าไม่ makesense
+- ทดสอบวัดน้ำตาลในเลือดของ Touch Technology พบว่าค่าไม่ขยับอยู่ที่ 98-106
+
+15 September 2023
+- เขียน server โดยใช้ nodejs เริ่มที่ /face_recog
+- เอาขึ้น gitlab แล้วส่งให้พี่มานะ เอาขึ้น server
+- สร้าง project ชื่อ MBK_laser_shooting ใน OpenProject
+- 08.30 น. เริ่มใส่ GTS5 แบบกลับด้าน
+- ออกแบบ database โดยเลือกใช้ mongodb
+- ผลการใส่ GTS5 แบบกลับด้านคือ ค่า random นำมาใช้งานไม่ได้
+
+22 September 2023
+- เขียน nodejs เชื่อมต่อ mongodb
+- revise โค้ด nodejs ให้เป็นแบบ ES6 ทั้งหมด
