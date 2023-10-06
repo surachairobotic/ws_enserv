@@ -33,7 +33,7 @@ PubSubClient client(espClient);
 unsigned long lastMsg = 0;
 #define MSG_BUFFER_SIZE	(100)
 char msg[MSG_BUFFER_SIZE];
-int value = 0;
+unsigned long value = 0;
 String msgOut = "", msgBuff = "";
 bool bPush = false;
 
