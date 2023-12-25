@@ -1,3 +1,8 @@
+import dlib
+
+# Initialize dlib with GPU support
+dlib.DLIB_USE_CUDA = True
+
 import os
 import cv2, time, queue, threading, copy
 import face_recognition
@@ -8,7 +13,7 @@ gNames = None
 bThread = True
 
 # Directory where the database images are stored
-DATABASE_FOLDER = "./people_resized_25/"
+DATABASE_FOLDER = "./people/"
 
 # Initialize known face encodings and names
 def initialize_database():
@@ -55,7 +60,7 @@ def recognize_faces(known_face_encodings, known_face_names, frame):
         names.append(name)
     t4 = time.time()
 
-    #print("Detect: {:.3f}\tRecog: {:.2f}\tCompare: {:.4f}".format(t2-t1, t3-t2, t4-t3))
+    print("Detect: {:.3f}\tRecog: {:.2f}\tCompare: {:.4f}".format(t2-t1, t3-t2, t4-t3))
     return face_locations, names
 
 def resize(img, percentage):
@@ -99,7 +104,7 @@ while True:
     # Capture a frame from the camera
     ret, local_frame = cap.read()
     #local_frame = cv2.cvtColor(local_frame, cv2.COLOR_BGR2GRAY)
-    local_frame = resize(local_frame, 0.25)
+    #local_frame = resize(local_frame, 0.25)
     frame = copy.deepcopy(local_frame)
 
     t4 = time.time()    
@@ -116,7 +121,7 @@ while True:
     cv2.imshow('Camera Feed', local_frame)
     t6 = time.time()
 
-    print([t6-t3])
+    #print([t6-t3])
     # Press 'q' to exit the loop
     if cv2.waitKey(1) & 0xFF == ord('q'):
         bThread = False
