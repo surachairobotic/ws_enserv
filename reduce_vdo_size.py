@@ -10,6 +10,6 @@ def compress_video(input_file, output_file, bitrate='250k'):
     print("Video compression complete.")
 
 # Example usage
-input_video = "C:/Users/surachair/Videos/2023-12-13_14-03-10.mp4"
-output_video = "C:/Users/surachair/Videos/2023-12-13_14-03-10_reduce.mp4"
+input_video = "C:/Users/surachair/Videos/2024-01-01_18-04-15.mp4"
+output_video = "C:/Users/surachair/Videos/2024-01-01_18-04-15_reduce.mp4"
 compress_video(input_video, output_video)

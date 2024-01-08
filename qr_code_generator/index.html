@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+</head>
+<body>
+    <div>
+        <label for="text-input">Enter Text:</label>
+        <input type="text" id="text-input" placeholder="Type your text here">
+        <button onclick="generateQR()">Generate QR Code</button>
+    </div>
+
+    <script>
+        function generateQR() {
+            const inputText = document.getElementById('text-input').value;
+
+            if (!inputText) {
+                alert('Please enter text to generate QR code.');
+                return;
+            }
+
+            const qrCodeUrl = `/str2qr?text=${encodeURIComponent(inputText)}`;
+            
+            // Create a temporary link element
+            const link = document.createElement('a');
+            link.href = qrCodeUrl;
+            link.download = 'qrcode.png';
+
+            // Append the link to the body and programmatically click it
+            document.body.appendChild(link);
+            link.click();
+
+            // Remove the link from the body
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
